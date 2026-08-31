@@ -1,0 +1,108 @@
+1)Comprender el problema
+
+·Se necesita diseñar un programa para una tienda online que calcule cuánto debe pagar una persona por su compra.
+El usuario debe indicar:
+-El importe total de la compra.
+-La cantidad de productos comprados.
+-Si es cliente registrado.
+-El método de envío elegido: retiro, estándar o express.
+
+-El programa debe aplicar las reglas comerciales de descuentos y envío que indique el docente. 
+-Finalmente, debe mostrar un resumen de la compra con el importe original, los descuentos aplicados, el costo del envío y el total a pagar.
+-También debe detectar datos inválidos y evitar realizar cálculos incorrectos.
+
+2)Identificar datos de entrada y resultados esperados
+Datos de entrada:
+-Importe de compra: número mayor o igual a cero.
+-Cantidad de productos: número entero mayor o igual a uno.
+-Cliente registrado: respuesta válida, por ejemplo si o no.
+-Método de envío: debe ser una de las opciones permitidas:
+retiro
+estándar
+express
+
+·Resultados esperados
+El programa debe mostrar:
+-Importe original de la compra.
+-Descuentos aplicados.
+-Porcentaje o monto total descontado.
+-Costo del envío.
+-Total final a pagar.
+
+3)Definir reglas, condiciones y validaciones
+·Reglas comerciales
+
+Antes de calcular el total, se deben aplicar las reglas indicadas por el docente. Estas pueden incluir, por ejemplo:
+
+-Un descuento por ser cliente registrado.
+-Un descuento adicional según el importe de la compra.
+-Un descuento según la cantidad de productos.
+-Un costo diferente dependiendo del método de envío.
+
+Si existen varios descuentos, se debe definir claramente si:
+
+-Se suman los porcentajes de descuento, o
+-Se aplican uno después del otro sobre el importe restante.
+·Condiciones:
+-Si la persona es cliente registrado, se aplica el descuento correspondiente.
+-Si el importe cumple determinada condición, se aplica un descuento adicional.
+-Si la cantidad de productos cumple determinada condición, se puede aplicar otro beneficio.
+-Según el método de envío, se asigna el costo correspondiente.
+·Validaciones:
+El programa debe controlar que:
+
+-El importe no sea negativo.
+-La cantidad de productos no sea menor que uno.
+-La respuesta sobre cliente registrado sea válida.
+-El método de envío exista entre las opciones permitidas.
+
+Si algún dato es incorrecto, debe solicitarse nuevamente o informarse el error antes de continuar.
+
+4)Diseñar el plan lógico
+-Pedir el importe de la compra.
+-Verificar que el importe sea válido.
+-Pedir la cantidad de productos.
+-Verificar que la cantidad sea mayor o igual a uno.
+-Preguntar si la persona es cliente registrado.
+-Validar la respuesta.
+-Pedir el método de envío.
+-Validar que sea retiro, estándar o express.
+-Determinar qué descuentos corresponden según las reglas comerciales.
+-Calcular el monto total descontado.
+-Restar el descuento al importe original para obtener el subtotal.
+-Determinar el costo del envío según el método elegido.
+-Sumar el subtotal y el costo del envío.
+-Mostrar un resumen completo con todos los resultados.
+
+5)Probar casos normales,límites y errores
+·Caso normal
+
+Probar una compra con:
+
+-Importe válido.
+-Cantidad válida.
+-Cliente registrado.
+-Un método de envío existente.
+
+·Se debe comprobar que los descuentos, el envío y el total sean correctos.
+
+·Caso límite
+
+Probar valores que estén justo en los límites, por ejemplo:
+
+-Importe igual a cero,si las reglas del ejercicio lo permiten.
+-Cantidad igual a uno.
+-Importe exactamente en el límite establecido para obtener un descuento.
+-Cantidad exactamente igual al mínimo necesario para obtener un beneficio.
+-Envío por retiro,que puede tener costo cero.
+·Casos de error
+
+Probar:
+
+-Un importe negativo.
+-Una cantidad igual a cero.
+-Una cantidad negativa.
+-Una respuesta diferente de si o no.
+-Un método de envío inexistente.
+
+·En todos estos casos,el programa debe detectar el problema y no continuar con datos inválidos.
